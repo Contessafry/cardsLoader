@@ -1,5 +1,8 @@
 /** @format */
 
+import { cardGenerator } from './utilities/cardGeneretor';
+import { getCards } from './utilities/store';
+
 export const mapNodes = {
   root: 'root',
   addBtn: 'addBtn',
@@ -17,4 +20,4 @@ export type cardComponent = {
   desc: string;
 };
 
-export const cardArray: cardComponent[] = [];
+export const cardArray: cardComponent[] = getCards();

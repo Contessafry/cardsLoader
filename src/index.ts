@@ -17,6 +17,6 @@ function startRender() {
 }
 
 window.onload = () => {
-  render('root', startRender);
+  render(mapNodes.root, startRender);
   utilityAddEventListener(mapNodes.addBtn, 'click', handlerPushCard);
 };
