@@ -1,18 +1,24 @@
+import { cardApp } from '..';
 import { cardComponent } from '../declarations';
-import { getCards } from './store';
+import { toggleMarkCards } from './dataCard';
 
-export function cardGenerator() {
-  let cards: cardComponent[] = getCards();
+export function cardGenerator(cards: cardComponent[]) {
+  //let cards: cardComponent[] = getCards();
+
   let parsedCards = cards
     .map(card => {
-      return `<div>
+      return `<div class="card">
     <div>
     <img src="${card.img}"/>
     </div>
-    <h2>${card.title}</h2>
-    <p>${card.desc}</p>
+    <h2 class="card-title">${card.title}</h2>
+    <p class="card-desc">${card.desc}</p>
+    <label for="${card.id}" class="checkboxCustom"> <span class="checkboxSlide">⚫</span>
+    <input type="checkbox" id="${card.id}" class="markChecker" ${card.isMarked ? 'checked' : ''}/>
+    </label>
     </div> `;
     })
     .join('');
   return parsedCards;
 }
+// all evento di click sulla checkbox card.ismarked = true e poi savemarkedcards

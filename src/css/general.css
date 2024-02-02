@@ -1,4 +1,110 @@
 body {
-    margin: 0;
-    padding: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #2e3233;
+  color: #333;
+  padding: 20px;
+  justify-content: center;
+}
+img {
+  width: 20vw;
+  height: 30vh;
+}
+
+#form {
+  display: flex;
+  background-color: #464a4c;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form input[type='text'] {
+  display: block;
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#form button {
+  width: 60%;
+  background-color: #009688;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#form button:hover {
+  background-color: #757575;
+}
+
+#switchCards {
+  margin: 20px 0;
+}
+
+#cardsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 2px solid #bdbdbd;
+  padding-top: 20px;
+}
+
+.card {
+  background-color: #bdbdbd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-title {
+  color: #616161;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card-desc {
+  color: #757575;
+  font-size: 14px;
+}
+
+.checkboxCustom {
+  display: flex;
+  width: 5vw;
+  background: #0a534c;
+  border-radius: 100px;
+  box-shadow: 0px 2px 4px black;
+}
+.checkboxSlide {
+  display: flex;
+  transition: transform 2s; /* Usa transform qui, non translate */
+}
+.markChecker {
+  display: none;
+}
+.switchCards {
+  margin-bottom: 1vh;
+  display: flex;
+  width: 3vw;
+  height: 4vh;
+  border-radius: 10%;
+  box-shadow: 0px 2px 4px black;
+  background-color: #009688;
+  justify-content: center;
+}
+#switchCards {
+  display: none;
 }
