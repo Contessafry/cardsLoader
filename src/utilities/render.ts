@@ -1,6 +1,7 @@
 import { cardApp } from '..';
 import { NodeID, mapNodes } from '../declarations';
 import { cardGenerator } from './cardGeneretor';
+import { toggleMarkCards } from './dataCard';
 import { utilityGetNode } from './getNode';
 
 export function render(nodeID: NodeID, component: () => string) {
@@ -16,5 +17,6 @@ export function toggleRenderList() {
     let cardlist = utilityGetNode(mapNodes.cardsList);
     if (formStyle.display === 'none') cardlist.innerHTML = cardGenerator(cardApp.markedCards);
     else cardlist.innerHTML = cardGenerator(cardApp.cardsArray);
+    toggleMarkCards();
   });
 }
