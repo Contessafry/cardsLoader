@@ -7,7 +7,6 @@ import { mapNodes } from './declarations';
 import { handlerPushCard, toggleMarkCards } from './utilities/dataCard';
 import { CardsClass } from './utilities/store';
 import { cardGenerator } from './utilities/cardGeneretor';
-import { utilityGetNode } from './utilities/getNode';
 
 function startRender() {
   return `<div><div id="form">
@@ -26,8 +25,7 @@ function startRender() {
 export const cardApp = new CardsClass();
 window.onload = () => {
   render(mapNodes.root, startRender);
-  toggleMarkCards();
   toggleRenderList();
-  console.log(toggleMarkCards());
+  toggleMarkCards();
   utilityAddEventListener(mapNodes.addBtn, 'click', handlerPushCard);
 };

@@ -90,7 +90,7 @@ img {
 }
 .checkboxSlide {
   display: flex;
-  transition: transform 2s; /* Usa transform qui, non translate */
+  transition: transform 2s;
 }
 .markChecker {
   display: none;

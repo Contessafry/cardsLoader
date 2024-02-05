@@ -17,6 +17,6 @@ export function toggleRenderList() {
     let cardlist = utilityGetNode(mapNodes.cardsList);
     if (formStyle.display === 'none') cardlist.innerHTML = cardGenerator(cardApp.markedCards);
     else cardlist.innerHTML = cardGenerator(cardApp.cardsArray);
-    toggleMarkCards();
   });
+  toggleMarkCards();
 }
